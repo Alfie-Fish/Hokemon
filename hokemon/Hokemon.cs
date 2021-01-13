@@ -28,13 +28,13 @@ namespace hokemon
 
             
         }
-        public string Name()
+        /*public string Name()
         {
-            get{ return name; }
+            Get{ return name; }
             set{
                 name = value;
             }
-        }
+        }*/
         public string getname()
         {
              return name;
