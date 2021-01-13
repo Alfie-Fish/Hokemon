@@ -28,10 +28,17 @@ namespace hokemon
 
             
         }
+        public string Name()
+        {
+            get{ return name; }
+            set{
+                name = value;
+            }
+        }
         public string getname()
         {
-            return name;
-        }
+             return name;
+         }
         public void get_details()
         {
             Console.WriteLine("health: {0}/{1} \n Attack: {2} \n Speed:{3} \n Defence: {4}", health, maxHealth, attack, speed, defence);
