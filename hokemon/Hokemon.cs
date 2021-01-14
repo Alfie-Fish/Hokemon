@@ -30,7 +30,7 @@ namespace hokemon
         }
         /*public string Name()
         {
-            Get{ return name; }
+            get{ return name; }
             set{
                 name = value;
             }
@@ -56,6 +56,22 @@ namespace hokemon
             randomValue = rnd.Next(minValue, maxValue);
 
             return randomValue;
+        }
+    public int Attack_generator()
+        {
+            int attackValue;
+
+            Random rnd = new Random();
+            attackValue = (attack * speed)  /10 * (rnd.Next(0, 3));
+            return attackValue;
+        }
+       public int Defence_generator()
+        {
+            int defenceValue;
+
+            Random rnd = new Random();
+            defenceValue = (defence * speed) /10 * (rnd.Next(0, 2));
+            return defenceValue;
         }
     }
 
