@@ -25,7 +25,6 @@ namespace hokemon
 
             hoke02.get_details();
             Console.WriteLine("//////////////////////////////////////");
-            Console.ReadLine();
             Hokemon hoke03 = new Hokemon();
 
             Console.WriteLine("the name is {0}", hoke03.getname());
@@ -33,11 +32,13 @@ namespace hokemon
             hoke03.get_details();
             
             Console.WriteLine("//////////////////////////////////////");
-            Hokemon hoke04 = new Hokemon();
+            Halor hoke04 = new Halor();
 
             Console.WriteLine("the name is {0}", hoke04.getname());
 
             hoke04.get_details();
+            hoke04.definition();
+            //Console.WriteLine("Team: {0}", hoke04.team);
             Console.WriteLine("//////////////////////////////////////");
             Console.ReadLine();
 

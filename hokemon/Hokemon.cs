@@ -15,6 +15,7 @@ namespace hokemon
         private int attack;
         private int speed;
         private int defence;
+       // public string team;
 
         //below is a constructor method used to create an object
         public Hokemon()
@@ -25,23 +26,23 @@ namespace hokemon
             attack = int_generator(10, 100);
             speed = int_generator(10, 100);
             defence = int_generator(10, 100);
-
+          //  team = "N/A";
             
         }
-        /*public string Name()
+        public string Name()
         {
             get{ return name; }
             set{
                 name = value;
             }
-        }*/
+        }
         public string getname()
         {
              return name;
          }
         public void get_details()
         {
-            Console.WriteLine("health: {0}/{1} \n Attack: {2} \n Speed:{3} \n Defence: {4}", health, maxHealth, attack, speed, defence);
+            Console.WriteLine("health: {0}/{1} \nAttack: {2} \nSpeed:{3} \nDefence: {4} ", health, maxHealth, attack, speed, defence);
         }
     public void give_name()
         {
@@ -72,6 +73,10 @@ namespace hokemon
             Random rnd = new Random();
             defenceValue = (defence * speed) /10 * (rnd.Next(0, 2));
             return defenceValue;
+        }      
+        public void definition()
+        {
+            Console.WriteLine("I am {0} ,a member of the hokemon tribe", name);
         }
     }
 
