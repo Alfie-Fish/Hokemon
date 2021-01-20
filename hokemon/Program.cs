@@ -46,6 +46,7 @@ namespace hokemon
             newbattleobject.requestAchallenger(hoke01);
 
             newbattleobject.theBattle(hoke01, hoke03);
+            Console.ReadLine();
         }
     }
     }

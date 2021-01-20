@@ -29,11 +29,18 @@ namespace hokemon
           //  team = "N/A";
             
         }
-        public string Name()
+        public string Name
         {
             get{ return name; }
             set{
                 name = value;
+            }
+        }
+        public int Health
+        {
+            get{ return health; }
+            set{
+                health = value;
             }
         }
         public string getname()

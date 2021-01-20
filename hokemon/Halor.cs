@@ -10,8 +10,11 @@ namespace hokemon
     {
         public string team = "halor";
 
+#pragma warning disable CS0108 // Member hides inherited member; missing new keyword
         public void definition()
+#pragma warning restore CS0108 // Member hides inherited member; missing new keyword
         {
             Console.WriteLine("I am {0} , a member of the team halor", Name);
         }
     }
+}
