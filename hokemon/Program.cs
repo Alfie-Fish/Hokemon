@@ -46,6 +46,7 @@ namespace hokemon
             newbattleobject.requestAchallenger(hoke01);
 
             newbattleobject.theBattle(hoke01, hoke02);
+            Console.WriteLine("{0} has defeated {1} and won the battle", Winner, Loser);
             Console.ReadLine();
         }
     }

@@ -11,11 +11,13 @@ namespace hokemon
         
         int round = 1;
         Hokemon temphoke;
+        Hokemon winner;
+        Hokemon loser;
         public void requestAchallenger(Hokemon requestor)
         {
             Console.WriteLine("{0}: wants a challenger", requestor.getname());
         }
-        public void theBattle(Hokemon attacker, Hokemon defender)
+        public Hokemon theBattle(Hokemon attacker, Hokemon defender)
         {
             Console.WriteLine("{0}; is waiting ..........", attacker.getname());
             System.Threading.Thread.Sleep(1000);
@@ -53,8 +55,49 @@ namespace hokemon
                 Console.ReadLine();
 
             }
+            if (attacker.Health > defender.Health)
+            {
+                 winner = attacker;
+                 loser = defender;
+                 public Hokemon Winner
+                    {
+                        get { return winner; }
+                        set
+                        {
+                            winner = value;
+                        }
+                    }
+                public Hokemon Loser
+                    {
+                        get { return loser; }
+                        set
+                        {
+                            loser = value;
+                        }
+                    }
+            }
+            else 
+            {
+                 winner = defender;
+                loser = attacker;
+                public Hokemon Winner
+                {
+                    get { return winner; }
+                    set
+                    {
+                        winner = value;
+                    }
+                }
+                public Hokemon Loser
+                {
+                    get { return loser; }
+                    set
+                    {
+                        loser = value;
+                    }
+                }
 
-        }
+            }
  
     }
 }

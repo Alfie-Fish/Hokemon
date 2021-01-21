@@ -23,9 +23,10 @@ namespace hokemon
             give_name();
             maxHealth = int_generator(10,100);
             health = maxHealth;
-            attack = int_generator(10, 100);
+            attack = int_generator(10, 50
+                );
             speed = int_generator(10, 50);
-            defence = int_generator(10, 20);
+            defence = int_generator(10, 50);
           //  team = "N/A";
             
         }
@@ -70,7 +71,7 @@ namespace hokemon
             int attackValue;
 
             Random rnd = new Random();
-            attackValue = (attack * speed)  /10 * (rnd.Next(0,2));
+            attackValue = (attack * speed)  /10 * (rnd.Next(1,3));
             return attackValue;
         }
        public int Defence_generator()
@@ -78,7 +79,7 @@ namespace hokemon
             int defenceValue;
 
             Random rnd = new Random();
-            defenceValue = ((defence * speed) /10 * (rnd.Next(0, 2)));
+            defenceValue = ((defence * speed) /10 * (rnd.Next(1, 3)));
             return defenceValue;
         }      
         public void definition()
