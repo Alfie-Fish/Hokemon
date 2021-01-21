@@ -29,7 +29,7 @@ namespace hokemon
 
             Console.WriteLine("the name is {0}", hoke03.getname());
 
-/*            hoke03.get_details();
+           hoke03.get_details();
             
             Console.WriteLine("//////////////////////////////////////");
             Halor hoke04 = new Halor();
@@ -39,7 +39,7 @@ namespace hokemon
             hoke04.get_details();
             hoke04.definition();
             //Console.WriteLine("Team: {0}", hoke04.team);
-*/            Console.WriteLine("//////////////////////////////////////");
+            Console.WriteLine("//////////////////////////////////////");
             Console.ReadLine();
 
             BattleArena newbattleobject = new BattleArena();
