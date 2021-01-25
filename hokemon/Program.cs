@@ -30,18 +30,30 @@ namespace hokemon
             }
             while (repeatGame == true)
             {
+                Console.WriteLine("{0} extended a challenger for a battle.", player.Name);
 
                 temp = ChallengerArray[rnd.Next(0, ChallengerArray.Length)];
-                if((temp.Health) > 0)
+                if ((temp.Health) > 0)
                 {
+
                     if ((player.Health) > 0)
                     {
-                        newBattleObject.theBattle(player, ChallengerArray[rnd.Next(0, ChallengerArray.Length)]);
+                        //player.get_details();
+                        //temp.get_details();
+                        newBattleObject.theBattle(player, temp);
                     }
                     else
                     {
                         Console.WriteLine("{0} Does not have enough health to battle.", player.Name);
+
                     }
+                }
+                else
+                {
+                    Console.WriteLine("{0} Does not have enough health to battle.", temp.Name);
+                }
+                if ((player.Health) > 0)
+                {
                     Console.WriteLine("Do you want annother battle?");
                     Result = Console.ReadLine();
                     if ((Result.ToLower())[0] == 'n')
@@ -49,16 +61,13 @@ namespace hokemon
                         repeatGame = false;
                     }
                 }
-                else 
+                else
                 {
-                    Console.WriteLine("{0} Does not have enough health to battle.", temp.Name);
-                }
-                Console.WriteLine("Do you want annother battle?");
-                Result = Console.ReadLine();
-                if ((Result.ToLower())[0] == 'n')
-                {
+                    Console.WriteLine("{0} has taken too much damage and cannot battle again", player.Name);
                     repeatGame = false;
                 }
+            }
+            Console.ReadLine();
                 /* Console.WriteLine("welcome to hokeworld home of the hokemon");
                      //instantiating a new object
                  Hokemon hoke01 = new Hokemon();
@@ -96,7 +105,7 @@ namespace hokemon
                  newbattleobject.theBattle(hoke01, hoke02);
                  //Console.WriteLine("{0} has defeated {1} and won the battle", Winner, Loser);
                  Console.ReadLine();*/
-            }
+            
         }
     }
 }

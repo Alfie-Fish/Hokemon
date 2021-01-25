@@ -24,6 +24,8 @@ namespace hokemon
             Console.WriteLine("{0}; is waiting ..........", attacker.getname());
             System.Threading.Thread.Sleep(1000);
             Console.WriteLine("{0} has accepted the challenge", defender.getname());
+            attacker.get_details();
+            defender.get_details();
 
             while (Convert.ToInt32(defender.Health) > 0 && Convert.ToInt32(attacker.Health) > 0)
             {

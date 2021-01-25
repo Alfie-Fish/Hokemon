@@ -50,7 +50,7 @@ namespace hokemon
          }
         public void get_details()
         {
-            Console.WriteLine("health: {0}/{1} \nAttack: {2} \nSpeed:{3} \nDefence: {4} ", health, maxHealth, attack, speed, defence);
+            Console.WriteLine("Name: {5} \nHealth: {0}/{1} \nAttack: {2} \nSpeed:{3} \nDefence: {4} \n", health, maxHealth, attack, speed, defence, name);
         }
     public void give_name()
         {
