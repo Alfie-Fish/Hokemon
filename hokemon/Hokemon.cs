@@ -71,7 +71,7 @@ namespace hokemon
             int attackValue;
 
             Random rnd = new Random();
-            attackValue = (attack * speed)  /10 * (rnd.Next(1,3));
+            attackValue = (attack * speed)  /10 * (rnd.Next(0,3));
             return attackValue;
         }
        public int Defence_generator()
@@ -79,7 +79,7 @@ namespace hokemon
             int defenceValue;
 
             Random rnd = new Random();
-            defenceValue = ((defence * speed) /10 * (rnd.Next(1, 3)));
+            defenceValue = ((defence * speed) /10 * (rnd.Next(0, 3)));
             return defenceValue;
         }      
         public void definition()

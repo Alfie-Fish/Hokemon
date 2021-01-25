@@ -17,7 +17,7 @@ namespace hokemon
         {
             Console.WriteLine("{0}: wants a challenger", requestor.getname());
         }
-        public Hokemon theBattle(Hokemon attacker, Hokemon defender)
+        public void theBattle(Hokemon attacker, Hokemon defender)
         {
             Console.WriteLine("{0}; is waiting ..........", attacker.getname());
             System.Threading.Thread.Sleep(1000);
@@ -25,24 +25,24 @@ namespace hokemon
             System.Threading.Thread.Sleep(1000);
             Console.WriteLine("{0} has accepted the challenge", defender.getname());
 
-            while(Convert.ToInt32(defender.Health) > 0 && Convert.ToInt32(attacker.Health) > 0)
-                {
+            while (Convert.ToInt32(defender.Health) > 0 && Convert.ToInt32(attacker.Health) > 0)
+            {
                 Console.WriteLine("round: {0}", round);
                 int attackValue = 0;
                 int defenceValue = 0;
-                for (int i = 1; i<2;i++)
+                for (int i = 1; i < 2; i++)
                 {
                     attackValue = attacker.Attack_generator();
 
-                    defenceValue= defender.Defence_generator();
+                    defenceValue = defender.Defence_generator();
 
                     Console.WriteLine("{0} generated an attack of {1}", attacker.Name, attackValue);
                     Console.WriteLine("{0} generated a defense of {1}", defender.Name, defenceValue);
-                    if ((attackValue - defenceValue) >0)
+                    if ((attackValue - defenceValue) > 0)
                     {
                         defender.Health = defender.Health - (attackValue - defenceValue);
                     }
-                    Console.WriteLine("{0} has {1} health remaning \n{2} has {3} health remaining",attacker.Name , attacker.Health, defender.Name, defender.Health);
+                    Console.WriteLine("{0} has {1} health remaning \n{2} has {3} health remaining", attacker.Name, attacker.Health, defender.Name, defender.Health);
                     System.Threading.Thread.Sleep(2000);
                 }
                 round = round + 1;
@@ -55,7 +55,7 @@ namespace hokemon
                 Console.ReadLine();
 
             }
-            if (attacker.Health > defender.Health)
+            /*if (attacker.Health > defender.Health)
             {
                  winner = attacker;
                  loser = defender;
@@ -78,8 +78,8 @@ namespace hokemon
             }
             else 
             {
-                 winner = defender;
-                loser = attacker;
+                Hokemon winner = defender;
+                Hokemon loser = attacker;
                 public Hokemon Winner
                 {
                     get { return winner; }
@@ -97,7 +97,7 @@ namespace hokemon
                     }
                 }
 
-            }
- 
+            }*/
+        }
     }
 }
