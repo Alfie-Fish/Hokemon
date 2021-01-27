@@ -15,6 +15,7 @@ namespace hokemon
         private int attack;
         private int speed;
         private int defence;
+        private int score = 0;
        // public string team;
 
         //below is a constructor method used to create an object
@@ -44,13 +45,21 @@ namespace hokemon
                 health = value;
             }
         }
+        public int Score
+        {
+            get { return score; }
+            set
+            {
+                score = value;
+            }
+        }
         public string getname()
         {
              return name;
          }
         public void get_details()
         {
-            Console.WriteLine("Name: {5} \nHealth: {0}/{1} \nAttack: {2} \nSpeed:{3} \nDefence: {4} \n", health, maxHealth, attack, speed, defence, name);
+            Console.WriteLine("Name: {5} \nHealth: {0}/{1} \nAttack: {2} \nSpeed:{3} \nDefence: {4} \n{5} has won {6} battles", health, maxHealth, attack, speed, defence, name,score);
         }
     public void give_name()
         {

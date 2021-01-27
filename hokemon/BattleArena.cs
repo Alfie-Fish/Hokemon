@@ -9,7 +9,15 @@ namespace hokemon
    class BattleArena
     {
         
-        int round = 1;
+        public int round = 1;
+        public int Round
+        {
+            get { return round; }
+            set
+            {
+                round = value;
+            }
+        }
         Hokemon temphoke;
         Hokemon winner;
         Hokemon loser;
@@ -57,6 +65,21 @@ namespace hokemon
                 Console.ReadLine();
 
             }
+
+            if (attacker.Health > defender.Health)
+            {
+                 winner = attacker;
+                 loser = defender;
+                winner.Score = winner.Score + 1;
+            }
+            else 
+            {
+                 winner = defender;
+                 loser = attacker;
+                winner.Score = winner.Score + 1;
+
+
+            }
             /*if (attacker.Health > defender.Health)
             {
                  winner = attacker;
@@ -100,6 +123,7 @@ namespace hokemon
                 }
 
             }*/
+
         }
     }
 }

@@ -30,6 +30,7 @@ namespace hokemon
             }
             while (repeatGame == true)
             {
+                BattleArena.Round = 1;
                 Console.WriteLine("{0} extended a challenger for a battle.", player.Name);
 
                 temp = ChallengerArray[rnd.Next(0, ChallengerArray.Length)];
